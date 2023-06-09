@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../03-JavaScript"
+		},
+		{
+			"path": "../../../04-Web-APIs"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../practice/create_click"
+		},
+		{
+			"path": "../../../practice/javascript_beginnings-JD"
+		},
+		{
+			"path": "../../../practice/java/javascript_beginnings"
+		}
+	],
+	"settings": {}
+}
