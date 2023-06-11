@@ -6,6 +6,10 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.text-center {
+    text-align: center;
+}
+
 html.body {
     height: 100%;
 
@@ -17,29 +21,116 @@ html.body {
 
 body {
     background-color: darkslategray;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
 }
 
-#start-btn{
-    font-size: x-large;
+.watch {
+    display: inline-block;
+    position: fixed;
+    top: 150px;
+    right: 400px;
+
+
+    text-align: center;
+    transform: scale(2);
+    font-size: xx-large;
+    padding: 5px;
+
+    border-radius: 5px;
+    border-color: blue;
+    border-style: solid;
+    color: whitesmoke;
+
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    font-size: 80px;
+    color: whitesmoke;
+    padding-bottom: 20px;
+    padding-top: 60px;
+
+}
+
+
+#start-btn {
+    font-size: 70px;
     color: bisque;
     background-color: blue;
     border-radius: 10px;
     border-style: none;
+    padding: 5px;
 
 }
-#start-btn:hover{
-cursor: pointer;
+
+#start-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.623);
 }
 
-main {
+article {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: blue;
+    color: blue;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;;
+}
+
+.choices button{
+    /* display: inline-block;
+    justify-content: center; */
+   
+    color: whitesmoke;
+  background-color: blue;
+  border-style: none;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+  font-size: large;
+}
+
+.choices button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: rgb(138, 129, 7);
+}
+
+.end{
+   
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: whitesmoke;
+   
     
-
+    background-color: rgb(36, 87, 199);
+    padding: 10px;
+    transform: scale(2.5);
+}
+h4{
+    font-size: x-large;
+    padding-bottom: 10px;
 }
 
-/* quiz-wrap {
-
-} */
+.end button{
+    background-color: red;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,36 @@
 </head>
 
 <body>
-   
+
     <main>
-      
-       <button id="start-btn" class="">Click When Ready!</button>
+        <div id="quiz-main">
+            <p class="watch">Time: <span id="timer-el">60</span></p>
+            <h1 class="text-center">Quiz App</h1>
+            <button id="start-btn" class="">Click When Ready!</button>
+            <!-- create some html so that we can hold the questions and choices -->
 
-       <div class="quiz-wrap hide">
-        <h3>what is the color of the atantic ocean</h3>
-        <div class="choices"></div>
-        <button>BLue</button>
-        <button>Yellow</button>
-        <button>orange</button>
-        <button>green</button>
+            <article class="quiz-wrap hide">
+                <h3 id="question-output" class="text-center">Test Question</h3>
+                <div class="choices"></div>
 
-  
-       </div>
-     
+
+
+            </article>
+        </div>
+        <div class="end hide">
+            <h4>Game Over</h4>
+            <form id="initial-form">
+                <label for="initials">Initals:</label>
+            <input type="text" name="initial" id="initials">
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+
     </main>
- 
-    
+
+
     <script src="./Assets/js/questions.js"></script>
     <script src="./Assets/js/scripts.js"></script>
 </body>
+
 </html>

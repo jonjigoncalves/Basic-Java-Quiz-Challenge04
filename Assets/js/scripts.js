@@ -1,52 +1,89 @@
 // // first goal is to connect start button
 var startBtn = document.querySelector('#start-btn')
 var quizwrap = document.querySelector('.quiz-wrap');
-startBtn.addEventListener('click', function(){
-startBtn.classList.add("hide");
-quizwrap.classList.remove('hide');
 
+var score = 0;
+var timeleft = 60;
 
+startBtn.addEventListener('click', function () {
+  startBtn.classList.add("hide");
+  quizwrap.classList.remove('hide');
+  startGame();
+  setInterval(clockTick, 1000);
+ 
 })
-// console.log(startBtn);
-// // then addEventlistner
-// startBtn.addEventListener('click',function(){
-//    document.getElementById('start').classList.add('hide')
-//    document.getElementById('quiz').classList.remove('hide')
-// });
-// add clickEvent
+function clockTick() {
+  timeleft--;
+  if (timeleft < 0) {
+    timeleft = 0;
+  }
+  document.getElementById('timer-el').innerText = timeleft
 
-
-var startBtn = document.querySelector('#start-btn');
-var currentQuestionIndex = 0
-function ShowCurrentQuestion(){
-  // get the question object of the current one from the index(currentQuestionIndex) and store it to a variable
-  var currentQuestion = questionData[currentQuestionIndex];
-  
 }
-function startGame(){
+var currentQuestionIndex = 0
+function startGame() {
   // hide start button
-startBtn.classList.add('hide');
-// show current question using the index
-ShowCurrentQuestion();f
 
-console.log('start!');
+  // show current question using the index
+  showQuestion();
+
+  console.log('start!');
 }
-startBtn.addEventListener('click', startGame);
+function showQuestion() {
+  console.log(questionData);
+  // get the question object of the current one from the index(currentQuestionIndex) and store it to a variable
+  var questionObj = questionData[currentQuestionIndex];
+  console.log(questionObj);
+  var questionOutputEl = document.getElementById('question-output');
+  questionOutputEl.innerText = questionObj.question;
+  var choicesOutputEl = document.querySelector('.choices');
+  choicesOutputEl.innerHTML = "";
+  for (index = 0; index < questionObj.options.length; index++) {
+    var button = document.createElement('button');
+    button.innerText = questionObj.options[index];
+    button.setAttribute('value', questionObj.options[index])
+    button.onclick = function () {
+      if (this.value === questionObj.answer) {
+        score++
+        console.log(score);
+      }
+      else {
+        timeleft -= 10;
+        console.log(timeleft);
+      }
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questionData.length) {
+        showQuestion();
+      }
+      else {
+        endGame();
+      }
+
+    }
 
 
+    choicesOutputEl.append(button);
 
 
-var h2 = document.querySelector(`#question-display`);
-var choicesdiv = document.querySelector(`.choices`);
-var currentQuestionIndex = 0
-
-for (var i=0; i<5; i++){
-    var answerBtn = document.createElement('button');
-
-    answerBt.innerText = questionData[currentQuestionIndex].choices[i];
-
-
-
+  }
 }
+function endGame() {
+  document.getElementById('quiz-main').setAttribute('class', 'hide');
+  document.querySelector('.end').classList.remove('hide');
 
-h2.innerText = questionData[currentQuestionIndex].question
+ 
+}
+  
+
+
+document.getElementById('initial-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  console.log(event.target);
+  var initials = document.getElementById('initials').value
+  console.log(initials);
+})
+// startBtn.addEventListener('click', startGame);
+
+
+
+

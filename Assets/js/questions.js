@@ -1,28 +1,42 @@
 var questionData = [
-
-    {
-        question: "Which team has won the most Premier League titles?",
-        options: ["Manchester United", "Liverpool", "Chelsea", "Manchester City"],
-        answer: "Manchester United"
-      },
-      {
-        question: "Who holds the record for the most goals scored in a single Premier League season?",
-        options: ["Thierry Henry", "Cristiano Ronaldo", "Alan Shearer", "Luis Suarez"],
-        answer: "Alan Shearer"
-      },
-      {
-        question: "Which team won the first Premier League season in 1992-1993?",
-        options: ["Manchester United", "Liverpool", "Arsenal", "Blackburn Rovers"],
-        answer: "Manchester United"
-      },
-      {
-        question: "Who is the best French striker of all time for Arsenal?",
-        options: ["Wayne Rooney", "Thierry Henry", "Sergio Aguero", "Alan Shearer"],
-        answer: "Thierry Henry"
-      },
-      {
-        question: "Which stadium has the highest seating capacity in the Premier League?",
-        options: ["Old Trafford", "Anfield", "Tottenham Hotspur Stadium", "Etihad Stadium"],
-        answer: "Old Trafford"
-      }
-    ];
+  {
+    question: "What is JavaScript?",
+    options: [
+      "A programming language",
+      "A markup language",
+      "A database management system",
+      "A text editor"
+    ],
+    answer: "A programming language"
+  },
+  {
+    question: "Which function is used to output something in the browser's console?",
+    options: ["console.log()", "document.write()", "alert()", "print()"],
+    answer: "console.log()"
+  },
+  {
+    question: "What is the purpose of the `typeof` operator in JavaScript?",
+    options: [
+      "To check the type of a variable",
+      "To create a new variable",
+      "To perform mathematical operations",
+      "To define a function"
+    ],
+    answer: "To check the type of a variable"
+  },
+  {
+    question: "Which symbol is used for equality comparison in JavaScript?",
+    options: ["=", "==", "===", "!=", "!=="],
+    answer: "==="
+  },
+  {
+    question: "How do you create a function in JavaScript?",
+    options: [
+      "function myFunction()",
+      "function = myFunction()",
+      "function:myFunction()",
+      "function => myFunction()"
+    ],
+    answer: "function myFunction()"
+  },
+];
