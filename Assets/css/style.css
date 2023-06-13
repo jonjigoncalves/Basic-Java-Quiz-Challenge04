@@ -31,14 +31,14 @@ body {
 
 .watch {
     display: inline-block;
-    position: fixed;
-    top: 150px;
-    right: 400px;
+    position: absolute;
+    top:25px;
+    right: 25px;
 
 
     text-align: center;
-    transform: scale(2);
-    font-size: xx-large;
+    /* transform: scale(2); */
+    font-size: 3rem;
     padding: 5px;
 
     border-radius: 5px;
