@@ -11,6 +11,7 @@ var timeleft = 60;
 startBtn.addEventListener('click', function () {
   startBtn.classList.add("hide");
   quizwrap.classList.remove('hide');
+  document.getElementById('alert').classList.add('hide')
   startGame();
   setInterval(clockTick, 1000);
 
@@ -26,8 +27,6 @@ function clockTick() {
 }
 var currentQuestionIndex = 0
 function startGame() {
-  // hide start button
-
   // show current question using the index
   showQuestion();
 
@@ -58,14 +57,17 @@ function showQuestion() {
     button.onclick = function () {
       if (this.value === questionObj.answer) {
         score += 100
-        console.log('Correct');
-        console.log(score);
+        // var correct = questionObj.answer 
+        // correct.style.backgroundColor = 'green';
+      
+      
       }
       else {
         timeleft -= 10;
-        console
+      
         // console.log(timeleft);
       }
+      
       
       currentQuestionIndex++;
       showQuestion();
@@ -117,9 +119,9 @@ function saveUserData(arr) {
 }
 
 
-document.getElementsByClassName('over').addEventListener('click', function(){
-  document.querySelector('.end').classList.add('hide');
-})
+// document.getElementsByClassName('over').addEventListener('click', function(){
+//   document.querySelector('.end').classList.add('hide');
+// })
 
 // issues with the div in end coming back after a few seconds, added a prevent default but it seems to just have delayed it, i suspect the endgame function is the issue as that is where the class hide is removed so the user can add there name before the score is displayed
 
@@ -150,13 +152,14 @@ function results() {
   var endDiv = document.querySelector('.end');
 endDiv.classList.add('hide1');
 // prevent 
-preventDefault();
+// preventDefault();
 }
 
 
 function showScores() {
   var users = getUserScores();
   var scoresDiv = document.querySelector('footer.scores');
+  scoresDiv.innerHTML = '';
 
   for (var i=0; i<users.length; i++){
   // for (var userObj of users) {
