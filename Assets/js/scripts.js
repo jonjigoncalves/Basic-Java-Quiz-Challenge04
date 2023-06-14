@@ -59,6 +59,7 @@ function showQuestion() {
         score += 100
         // var correct = questionObj.answer 
         // correct.style.backgroundColor = 'green';
+        // choicesOutputEl.innerText = 'correct';
       
       
       }
