@@ -127,17 +127,19 @@ function saveUserData(arr) {
 // issues with the div in end coming back after a few seconds, added a prevent default but it seems to just have delayed it, i suspect the endgame function is the issue as that is where the class hide is removed so the user can add there name before the score is displayed
 
 function results() {
-  // Hide the form
+  // add .hide to the form so it will dissapear
   // var form = document.getElementById('initial-form');
   // form.classList.add('hide');
 
   
 
-  // Display the scores
+  // show scofres
   var scoresDiv = document.querySelector('footer.scores');
   scoresDiv.classList.remove('hide');
 
-  // Create and append score elements
+  
+
+  // set the scores and initials into an object
   var initials = document.getElementById('initials').value;
   var userScore = {
     name: initials,
@@ -156,7 +158,8 @@ endDiv.classList.add('hide1');
 // preventDefault();
 }
 
-
+  
+   // create the elements and append them to those elements to show the scores.
 function showScores() {
   var users = getUserScores();
   var scoresDiv = document.querySelector('footer.scores');
