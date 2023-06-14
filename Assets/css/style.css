@@ -18,6 +18,9 @@ html.body {
 .hide {
     display: none;
 }
+.hide1{
+display: none;
+}
 
 body {
     background-color: darkslategray;

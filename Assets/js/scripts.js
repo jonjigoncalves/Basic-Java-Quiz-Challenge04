@@ -125,8 +125,8 @@ document.getElementsByClassName('over').addEventListener('click', function(){
 
 function results() {
   // Hide the form
-  var form = document.getElementById('initial-form');
-  form.classList.add('hide');
+  // var form = document.getElementById('initial-form');
+  // form.classList.add('hide');
 
   
 
@@ -148,7 +148,7 @@ function results() {
   showScores();
 
   var endDiv = document.querySelector('.end');
-endDiv.classList.add('hide');
+endDiv.classList.add('hide1');
 // prevent 
 preventDefault();
 }
